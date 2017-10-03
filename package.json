@@ -1,0 +1,45 @@
+{
+  "name": "styled-apply-when-truthy",
+  "repository": "https://github.com/Typeform/styled-apply-when-truthy.git",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-jest": "^21.2.0",
+    "babel-preset-env": "^1.6.1",
+    "flow-bin": "^0.57.3",
+    "flow-typed": "^2.2.0",
+    "flow-watch": "^1.1.1",
+    "husky": "^0.14.3",
+    "in-publish": "^2.0.0",
+    "jest": "^21.2.1",
+    "lint-staged": "^4.2.3",
+    "prettier-standard": "^7.0.1",
+    "rimraf": "^2.6.2",
+    "semantic-release": "^8.0.3",
+    "validate-commit-msg": "^2.14.0"
+  },
+  "dependencies": {},
+  "lint-staged": {
+    "src/**/*.js": [
+      "prettier-standard",
+      "git add"
+    ]
+  },
+  "files": [
+    "lib",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "npm run clean && babel src --ignore __tests__ -d lib",
+    "clean": "rimraf lib",
+    "commitmsg": "validate-commit-msg",
+    "flow": "flow",
+    "flow:update": "flow-typed update",
+    "flow:watch": "flow-watch",
+    "precommit": "lint-staged",
+    "prepublish": "in-publish && npm run build || not-in-publish",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post",
+    "test": "jest",
+    "test:watch": "jest --watch"
+  }
+}
