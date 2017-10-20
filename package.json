@@ -1,6 +1,6 @@
 {
   "name": "styled-apply-when-truthy",
-  "repository": "https://github.com/Typeform/styled-apply-when-truthy.git",
+  "repository": "https://github.com/terrencewwong/styled-apply-when-truthy.git",
   "license": "MIT",
   "main": "lib/apply-when-truthy.js",
   "devDependencies": {
