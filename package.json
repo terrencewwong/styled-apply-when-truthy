@@ -2,10 +2,12 @@
   "name": "styled-apply-when-truthy",
   "repository": "https://github.com/Typeform/styled-apply-when-truthy.git",
   "license": "MIT",
+  "main": "lib/apply-when-truthy.js",
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-jest": "^21.2.0",
     "babel-preset-env": "^1.6.1",
+    "babel-preset-flow": "^6.23.0",
     "flow-bin": "^0.57.3",
     "flow-typed": "^2.2.0",
     "flow-watch": "^1.1.1",
